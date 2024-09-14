@@ -1,7 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <link href="%PUBLIC_URL%/App.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Anek+Devanagari:wght@100..800&family=Arsenal+SC:ital,wght@0,400;0,700;1,400;1,700&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Kalnia+Glaze:wght@100..700&family=Playwrite+AR:wght@100..400&display=swap" rel="stylesheet">
     <meta charset="utf-8" />
+    <style>
+      .logo-container {
+          display: flex;
+          align-items: center;
+          font-family: Arial, sans-serif;
+      }
+
+      .logo-container img {
+          width: 50px; /* Adjust the size of the "C" icon */
+          height: auto;
+          margin-right: 10px;
+      }
+
+      .logo-text {
+          font-size: 24px;
+          color: #333;
+          font-weight: 800 ;
+      }
+
+      .highlight {
+          color: #e94b25; /* Use the color from the "C" icon for "CRITTER" */
+      }
+
+
+      
+   </style>
+
+
     <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="theme-color" content="#000000" />
@@ -10,34 +41,343 @@
       content="Web site created using create-react-app"
     />
     <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
-    <!--
-      manifest.json provides metadata used when your web app is installed on a
-      user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
-    -->
     <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
-    <!--
-      Notice the use of %PUBLIC_URL% in the tags above.
-      It will be replaced with the URL of the `public` folder during the build.
-      Only files inside the `public` folder can be referenced from the HTML.
-
-      Unlike "/favicon.ico" or "favicon.ico", "%PUBLIC_URL%/favicon.ico" will
-      work correctly both with client-side routing and a non-root public URL.
-      Learn how to configure a non-root public URL by running `npm run build`.
-    -->
     <title>React App</title>
   </head>
   <body>
-    <noscript>You need to enable JavaScript to run this app.</noscript>
-    <div id="root"></div>
-    <!--
-      This HTML file is a template.
-      If you open it directly in the browser, you will see an empty page.
+    
 
-      You can add webfonts, meta tags, or analytics to this file.
-      The build step will place the bundled scripts into the <body> tag.
 
-      To begin the development, run `npm start` or `yarn start`.
-      To create a production bundle, use `npm run build` or `yarn build`.
-    -->
+    
+    <div class="container">
+            <!-- <div class="logo-container" style="margin-top: 1.5%; margin-left: 1.5%;">
+              <img src="%PUBLIC_URL%/img/tran.png" alt=" " style="margin-top: -0.8%;">
+              <span class="logo-text" style="font-family: 'Anek Devanagari' , sans-serif; font-weight: 1000; line-height: 1;"><span class="highlight">Critter<span style="line-break: 0.8;"><br>Graphix</span>
+            </div>
+
+            <div class="logo-container" style="margin-left: 85%; margin-top: -4%;">
+              <img src="%PUBLIC_URL%/img/tran.png" alt=" " style="margin-top: -5%;">
+              <span class="logo-text" style="font-family: 'Anek Devanagari' , sans-serif; font-weight: 1000; line-height: 1;"><span class="highlight">Critter<span style="line-break: 0.8;"><br>Graphix</span>
+            </div> -->
+
+
+
+
+      <div class="forms-container" style="margin-left: -8%; margin-top: 2%;">
+        <div class="signin-signup" >
+
+
+          <form action="/login" class="sign-in-form" method="POST" onsubmit="handleSignin(event)" id="signin_f">
+            <h2 class="title">Sign in</h2>
+            <div class="input-field">
+              <i class="fas fa-user"></i>
+              <input type="email" placeholder="Email" name="email" />
+            </div>
+            <div class="input-field">
+              <i class="fas fa-lock"></i>
+              <input type="password" placeholder="Password" name="password" />
+              <i class="fas fa-eye-slash bx bx-hide show-hide"></i>
+            </div>
+            <input type="submit" value="Login" class="btn solid" />
+            <p class="social-text">Or Sign In Using</p>
+            <div class="social-media">
+                 <!-- <a href="#" class="social-icon">
+                <i class="fab fa-facebook-f"></i>
+              </a>
+              <a href="#" class="social-icon">
+                <i class="fab fa-twitter"></i>
+              </a> -->
+              <div id="root"></div>
+              <!--<a href="#" class="social-icon">
+                <i class="fab fa-linkedin"></i>
+              </a> -->
+            </div>
+          </form>
+
+
+        
+      
+          <form action="/signup" class="sign-up-form" method="POST" onsubmit="handleSignup(event)">
+            <h2 class="title">Sign up</h2>
+            <div class="input-field">
+              <i class="fas fa-user"></i>
+              <input type="text" placeholder="Username" name="username" />
+            </div>
+            <div class="input-field email-field ">
+              <i class="fas fa-envelope"></i>
+              <input type="email" placeholder="Email" name="email" />
+            </div>
+            <div class="input-field">
+              <i class="fas fa-lock"></i>
+              <input type="password" placeholder="Password" name="password" />
+              <i class="fas fa-eye-slash bx bx-hide show-hide"></i>
+            </div>
+            <div class="input-field">
+              <i class="fas fa-lock"></i>
+              <input type="password" placeholder="Confirm Password" name="c_password" />
+              <i class="fas fa-eye-slash bx bx-hide show-hide"></i>
+            </div>
+            <input type="submit" class="btn" value="Sign up" />
+            <p class="social-text">Or Sign Up Using</p>
+            <div class="social-media">
+              <!-- <a href="#" class="social-icon">
+                <i class="fab fa-facebook-f"></i>
+              </a>
+              <a href="#" class="social-icon">
+                <i class="fab fa-twitter"></i>
+              </a> -->
+              <div id="ro"></div>
+              <!-- <a href="#" class="social-icon">
+                <i class="fab fa-linkedin"></i>
+              </a> -->
+            </div>
+          </form>
+
+
+        </div>        
+      </div>
+
+
+
+
+      <div class="panels-container" >
+        <div class="panel left-panel">
+          <div class="content" style="margin-top: 15%;">
+            <h3>Welcome back! </h3>
+            <p>
+              New here? Sign up now.  
+            </p>
+            <button class="btn transparent" id="sign-up-btn">
+              Sign up
+            </button>
+          </div>
+          <img src="%PUBLIC_URL%/img/log.svg" class="image" alt="" />
+        </div>
+
+
+        <div class="panel right-panel">
+          <div class="content" style="margin-top: 5%;">
+            <h3>Join us today!</h3>
+            <p>
+              Already a member? Log in here.
+            </p>
+            <button class="btn transparent" id="sign-in-btn">
+              Sign in
+            </button>
+          </div>
+          <img src="%PUBLIC_URL%/img/register.svg" class="image" alt="" />
+        </div>
+      </div>
+    </div>
   </body>
+
+
+
+  
+<script>//FORM TOGGLE FROM SIGNIN TO SIGNUP
+
+const sign_in_btn = document.querySelector("#sign-in-btn");
+const sign_up_btn = document.querySelector("#sign-up-btn");
+const container = document.querySelector(".container");
+
+sign_up_btn.addEventListener("click", () => {
+container.classList.add("sign-up-mode");
+});
+
+sign_in_btn.addEventListener("click", () => {
+container.classList.remove("sign-up-mode");
+});
+
+</script>
+
+
+
+
+<script>//EYE TOGGLE TO SEE THE PASSWORD AND HIDE IT
+  document.addEventListener('DOMContentLoaded', () => {
+    const eyeIcons = document.querySelectorAll(".show-hide");
+
+    eyeIcons.forEach((eyeIcon) => {
+      eyeIcon.addEventListener("click", () => {
+        const pInput = eyeIcon.parentElement.querySelector("input"); // Get the password input
+        if (pInput.type === "password") {
+          eyeIcon.classList.replace("bx-hide", "bx-show");
+          pInput.type = "text";
+        } else {
+          eyeIcon.classList.replace("bx-show", "bx-hide");
+          pInput.type = "password";
+        }
+      });
+    });
+  });
+</script>
+
+
+
+
+<script>//HANDLE SIGNUP API & MANUAL
+
+  async function handleSignup(event) {
+  event.preventDefault(); // Prevent the default form submission
+
+    // Get form data
+    const form = event.target;
+    const formData = new FormData(form);
+    
+    const data = {
+      username: formData.get('username'),
+      email: formData.get('email'),
+      password: formData.get('password')
+    };
+
+    try {
+      const response = await fetch('/api/auth/signup', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(data)
+      });
+
+      const result = await response.json();
+
+      if (response.ok) {
+        window.location.href = result.redirect; // Redirect based on server response
+      } else {
+        alert('Signup failed: ' + result.message);
+      }
+    } catch (error) {
+      console.error('Error during signup:', error);
+      alert('An error occurred. Please try again later.');
+    }
+  }
+</script>
+
+
+
+
+
+<script>//API & SIGNIN MANUAL
+
+  async function handleSignin(event) {
+    event.preventDefault();
+    const form = document.getElementById('signin_f');
+    const formData = new FormData(form);
+    
+    const data = {
+      email: formData.get('email'),
+      password: formData.get('password')
+    };
+
+    try {
+      const response = await fetch('/api/auth/signin', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(data)
+      });
+
+      const result = await response.json();
+
+      if (response.ok) {
+        // Save username in localStorage for later use
+        localStorage.setItem('username', result.username);
+
+        // Redirect based on server response
+        window.location.href = result.redirect;
+      } else {
+        alert('Sign-in failed: ' + result.message);
+      }
+    } catch (error) {
+      console.error('Error during sign-in:', error);
+      alert('An error occurred. Please try again later.');
+    }
+  }
+</script>
+
+
+
+
+<script>
+  document.getElementById('confirmPassword').addEventListener('input', function() {
+      const password = document.getElementById('password').value;
+      const confirmPassword = this.value;
+
+      if (confirmPassword === password) {
+          this.style.borderColor = ''; // Reset border color if passwords match
+      } else {
+          this.style.borderColor = 'red'; // Set border color to red if passwords don't match
+      }
+  });
+</script>
+
+
+
+
+<script>
+      const form = document.querySelector("form"),
+      emailField = form.querySelector(".email-field"),
+      emailInput = emailField.querySelector(".email"),
+      // passField = form.querySelector(".create-password"),
+      // passInput = passField.querySelector(".password"),
+      cPassField = form.querySelector(".confirm-password"),
+      cPassInput = cPassField.querySelector(".cPassword");
+
+
+  // Email Validtion
+  function checkEmail() 
+  {
+    const emaiPattern = /^[^ ]+@[^ ]+\.[a-z]{2,3}$/;
+    if (!emailInput.value.match(emaiPattern)) {
+      return emailField.classList.add("invalid"); //adding invalid class if email value do not mathced with email pattern
+    }
+    emailField.classList.remove("invalid"); //removing invalid class if email value matched with emaiPattern
+  }
+
+  // // Password Validation
+  // function createPass()
+  // {
+  //   const passPattern =
+  //     /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/;
+
+  //   if (!passInput.value.match(passPattern)) {
+  //     return passField.classList.add("invalid"); //adding invalid class if password input value do not match with passPattern
+  //   }
+  //   passField.classList.remove("invalid"); //removing invalid class if password input value matched with passPattern
+  // }
+
+  // Confirm Password Validtion
+  function confirmPass() {
+    if (passInput.value !== cPassInput.value || cPassInput.value === "") {
+      return cPassField.classList.add("invalid");
+    }
+    cPassField.classList.remove("invalid");
+  }
+
+  // Calling Funtion on Form Sumbit
+  form.addEventListener("submit", (e) => {
+    e.preventDefault(); //preventing form submitting
+    checkEmail();
+    createPass();
+    confirmPass();
+
+    //calling function on key up
+    emailInput.addEventListener("keyup", checkEmail);
+    passInput.addEventListener("keyup", createPass);
+    cPassInput.addEventListener("keyup", confirmPass);
+
+    if (
+      !emailField.classList.contains("invalid") &&
+      !passField.classList.contains("invalid") &&
+      !cPassField.classList.contains("invalid")
+    ) {
+      location.href = form.getAttribute("action");
+    }
+  });
+
+
+</script>
+
+
 </html>
